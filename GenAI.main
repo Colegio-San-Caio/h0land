@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GenAI Execution Node</title>
+</head>
+<body>
+    <div id="status">Initializing GenAI Core...</div>
+
+    <script type="module">
+        // Import or define the GenAI main runner structure
+        const GenAI = {
+            async main(config) {
+                console.log("GENAI_CORE: Starting execution pipeline...", config);
+                document.getElementById("status").innerText = "GenAI Core Active: Ready";
+                
+                // Add your model initialization or prompt execution logic here
+                return { status: "SUCCESS", timestamp: Date.now() };
+            }
+        };
+
+        // Trigger the main entry point on load
+        window.addEventListener("DOMContentLoaded", async () => {
+            try {
+                const result = await GenAI.main({ environment: "production", debug: true });
+                console.log("Execution Result:", result);
+            } catch (error) {
+                console.error("Execution Failed:", error);
+                document.getElementById("status").innerText = "Error: Initialization Failed";
+            }
+        });
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html><head><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>oeneyeMOSFETQfont - OENEYE</title>
+<style>
+body{background:#000;color:#fff;font-family:monospace;padding:15px}
+.mosfetq{font-family:monospace;letter-spacing:2px;font-size:28px;color:#0f0;text-shadow:0 0 10px #0f0}
+.box{border:2px solid #0f0;padding:15px;margin:12px 0}
+a{color:#0f0} .btn{background:#0f0;color:#000;padding:10px 16px;text-decoration:none;display:inline-block;margin:4px}
+pre{background:#111;color:#0f0;padding:12px;overflow:auto;white-space:pre-wrap}
+</style></head>
+<body>
+<h1>👁️ oeneyeMOSFETQfont</h1>
+<p><a href="index.html">← Klausur</a> | <a href="OneEYEMail.HTML">OneEYEMail</a></p>
+
+<div class="box">
+<p class="mosfetq">MOSFETQ ABCDEFGHIJKLM<br>NOPQRSTUVWXYZ 0123456789<br>TECHNOLOGIE ALS GESELLSCHAFTSTREIBER</p>
+<p>Font: MOSFETQ - Grid 16,16 - Block 16,16 - BLUH.XKTS</p>
+<label>Try your text: <input id="ft" value="OENEYE MOSFETQ" oninput="document.getElementById('fp').innerText=this.value" style="width:80%;padding:10px"></label>
+<p id="fp" class="mosfetq">OENEYE MOSFETQ</p>
+</div>
+
+<div class="box"><h2>Connected:</h2>
+<a class="btn" href="oeneyeNASM.HTML">1. oeneyeNASM - Assembly</a>
+<a class="btn" href="oeneyeSandbox.HTML">2. oeneyeSandbox - Try It</a>
+<a class="btn" href="oeneyeEmail.HTML">3. oeneyeEmail - Mail</a>
+<a class="btn" href="OneEYEMail.HTML">4. OneEYEMail - Full</a>
+</div>
+
+<div class="box"><h2>Code Box - Use the Font:</h2>
+<pre>&lt;!-- oeneyeMOSFETQfont --&gt;
+&lt;style&gt;
+.mosfetq{font-family:monospace;letter-spacing:2px;
+color:#0f0;text-shadow:0 0 10px #0f0}
+&lt;/style&gt;
+&lt;p class="mosfetq"&gt;MOSFETQ&lt;/p&gt;
+&lt;!-- NASM: oeneyeNASM.HTML | Sandbox: oeneyeSandbox.HTML | Email: oeneyeEmail.HTML --&gt;</pre>
+</div>
+
+<!-- ADDITIONAL BOX - BOTTOM - NO DATE -->
+<div style="border:2px solid #0f0;padding:15px;margin:20px 0;background:#000;color:#fff;font-family:monospace">
+<h2>[ADDITIONAL BOX - BOTTOM] ornop.qasm + index.html</h2>
+<p><a href="https://github.com/kaiolafketelhut/index.html/blob/main/ornop.qasm" style="color:#0f0">ornop.qasm - GitHub</a> | <a href="https://github.com/kaiolafketelhut/index.html/blob/main/index.html" style="color:#0f0">index.html - GitHub</a><br>
+<a href="https://raw.githubusercontent.com/kaiolafketelhut/index.html/main/ornop.qasm" style="color:#0ff">Raw ornop.qasm</a> | <a href="https://raw.githubusercontent.com/kaiolafketelhut/index.html/main/index.html" style="color:#0ff">Raw index.html</a></p>
+<pre style="background:#111;color:#0f0;padding:10px;white-space:pre-wrap">git clone https://github.com/kaiolafketelhut/index.html
+curl -sL https://raw.githubusercontent.com/kaiolafketelhut/index.html/main/ornop.qasm -o ornop.qasm</pre>
+<pre style="background:#111;color:#0f0;padding:10px;white-space:pre-wrap">// ornop.qasm - OENEYE / MOSFETQ
+OPENQASM 3.0;
+include "stdgates.inc";
+qubit[2] q;
+h q[0];
+cx q[0], q[1];
+measure q;</pre>
+</div>
+
+<!-- HI.C BOX - BOTTOM - NO DATE -->
+<div style="border:2px solid #0f0;padding:15px;margin:20px 0;background:#000;color:#fff;font-family:monospace">
+<h2>[HI.C BOX] Hi.c - OENEYE</h2>
+<p><a href="Hi.c" style="color:#0f0">Hi.c - Open</a> | <a href="https://github.com/kaiolafketelhut/index.html/blob/main/ornop.qasm" style="color:#0f0">ornop.qasm</a> | <a href="oeneyeMOSFETQfont.HTML" style="color:#0f0">MOSFETQfont</a></p>
+<pre style="background:#111;color:#0f0;padding:10px;white-space:pre-wrap">gcc Hi.c -o Hi && ./Hi
+# Output:
+# Hi.c
+# MOSFETQ - OENEYE - 16,16
+# -1
+# ;</pre>
+<p>From email: From oeneyeos@gmail.com - Subject: -1 - Body: ; - To: oeneyeos@gmail.com (not mail@github.io - that one has no mail server)</p>
+</div>
+</body></html>

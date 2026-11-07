@@ -1,0 +1,27 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BLUH :: BLY</title>
+<style>
+body{background:#000;margin:16px}
+.box{border:1px solid #1c2430;border-radius:10px;overflow:hidden;background:linear-gradient(145deg,#050607,#0d1014 55%,#030304);color:#3dff9a;font:13px monospace}
+.bar{padding:6px 10px;letter-spacing:2px;background:#10151b;border-bottom:1px solid #1c2430}
+pre{margin:0;padding:10px;height:220px;overflow:auto;white-space:pre-wrap}
+.in{display:flex;border-top:1px solid #1c2430}
+input{flex:1;min-width:0;background:transparent;border:0;outline:0;color:#3dff9a;font:13px monospace;padding:8px}
+</style></head><body>
+<div class="box"><div class="bar">=== OBSIDIAN MAINFRAME :: BLUH ===</div>
+<pre id="o"></pre>
+<div class="in"><span style="padding:8px 0 8px 10px">&gt;</span><input id="i" autocomplete="off"></div></div>
+<script>
+var R=[["hello", "GREETINGS, OPERATOR."], ["who", "I AM BLUH, AN OBSIDIAN MAINFRAME."], ["status", "ALL SYSTEMS NOMINAL."], ["help", "TRY: hello, who, status, joke, nasa, cobol, linux, grid, thanks, bye"], ["joke", "THERE ARE 10 TYPES OF OPERATORS: THOSE WHO READ BINARY AND THOSE WHO DO NOT."], ["nasa", "SEE THE NASA BOX ABOVE. APOD UPLINK AVAILABLE."], ["cobol", "BLUH.cpy, main.cob AND HTML.cbl ARE LOADED. COBOL STILL RUNS THE WORLD."], ["linux", "TAP BOOT LINUX ABOVE. KERNEL 7.3 RUNS IN YOUR BROWSER."], ["grid", "GRID 16x16, BLOCK 16x16. NO FAULTS."], ["thank", "ACKNOWLEDGED, OPERATOR."], ["bye", "CONNECTION CLOSED. OBSIDIAN GLASS GOES DARK."], ["00", "BINARY 00 = OFF. OFF."], ["01", "BINARY 01 = ON. SIGNAL HIGH."], ["10", "BINARY 10 = TWO. SIGNAL RISING."], ["11", "BINARY 11 = THREE. ALL BITS SET."], ["22", "DECIMAL 22 = BINARY 10110 = HEX 16."]],M="STUB",o=document.getElementById("o"),i=document.getElementById("i");
+function p(t){o.textContent+=t+"\n";o.scrollTop=o.scrollHeight;}
+p("GRID 16,16 BLOCK 16,16");
+i.addEventListener("keydown",function(e){
+ if(e.key!=="Enter")return;
+ var q=i.value.trim();i.value="";if(!q)return;p("> "+q);
+ var a="NO MATCH. TYPE help";
+ for(var n=0;n<R.length;n++){if(q.toLowerCase().indexOf(R[n][0])>=0){a=R[n][1];break;}}
+ p("["+M+"] "+a);
+});
+</script></body></html>

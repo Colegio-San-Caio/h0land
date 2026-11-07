@@ -1,0 +1,7 @@
+Source: oeneye-forensics
+Section: utils
+Priority: optional
+Maintainer: Kai KETELHUT (oeneye) <oeneye@launchpad>
+Build-Depends: debhelper (>= 9)
+Standards-Version: 3.9.6
+

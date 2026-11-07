@@ -1,0 +1,5 @@
+# main.BLY - entry file for the BLUH rules
+INCLUDE=BLUH.bly
+BANNER==== OBSIDIAN MAINFRAME :: BLUH ===
+PROMPT=> 
+EXIT=quit

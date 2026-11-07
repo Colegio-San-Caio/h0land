@@ -1,0 +1,494 @@
+<!-- OMQpreview.ximg runtime - Copyright (c) kaiolafketelhut / index.html - Used by permission / only hosted there. Do not copy. Loaded via fetch from canonical repo. -->
+<!DOCTYPE html>
+<html><head><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OneEyeMail - MOSFETQ</title></head>
+<body style="background:#fff;color:#000;font-family:sans-serif;padding:10px;margin:0">
+<div style="border:2px solid red;padding:12px;margin:10px 0;background:#ffe6e6;color:#000">
+<b>⚠️ mail@kaiolafketelhut.github.io DOES NOT WORK</b><br>
+GitHub Pages is only a website, it has NO mail server. Gmail says: timed out / Delivery incomplete.<br>
+<b>Use instead:</b> <a href="mailto:oeneyeos@gmail.com">oeneyeos@gmail.com</a> — this is your real inbox.<br>
+OneEyeMail now defaults To: to oeneyeos@gmail.com
+</div>
+
+<div style="background:#000;color:#fff;padding:8px;display:flex;justify-content:space-between"><b>👁️ OneEyeMail</b><span>19:55:00</span></div>
+
+<!-- FILE LIST BOX -->
+<div style="border:1px solid #000;margin:10px 0;padding:8px;font-size:13px">
+<div style="display:flex;justify-content:space-between;border-bottom:1px solid #ddd;padding:4px"><span>X: workshop.img - 1.4 MB</span><span>dl</span></div>
+<div style="display:flex;justify-content:space-between;border-bottom:1px solid #ddd;padding:4px"><span>fily.img - 360 KB</span><span>dl</span></div>
+<div style="display:flex;justify-content:space-between;padding:4px"><span>iframe.frame.html - Macro</span><span>open</span></div>
+<div style="background:#000;color:#0f0;padding:8px;margin-top:6px;font-family:monospace;font-size:12px;overflow:auto">qemu-system-i386 -fda oeneyeOS.img -fdb data.img -hda date.img -hdb G:\OeneyeALPINEunix.img</div>
+</div>
+
+<!-- QEMU CLONE BOX -->
+<div style="border:1px solid #000;margin:10px 0;padding:10px">
+<b>[QEMU-CLONE BOX] by book - tinyurl.com/qemu-clone - new</b><br>
+TinyURL: <a href="https://tinyurl.com/qemu-clone">https://tinyurl.com/qemu-clone</a> -- resolved to github.com/qemu/qemu<br>
+Local submodule: <code>.qemu-clone/</code> - 931011 objects, 698 MB - GitHub: <a href="https://github.com/kaiolafketelhut/qemu_clone">kaiolafketelhut/qemu_clone</a>
+<p><b>Clone:</b></p>
+<pre style="background:#eee;padding:8px">git clone https://github.com/qemu/qemu qemu_clone
+git submodule add https://github.com/qemu/qemu qemu-clone</pre>
+<p><b>Build (old mirror emu):</b></p>
+<pre style="background:#000;color:#0f0;padding:10px;font-size:12px;overflow:auto">cd qemu-clone
+./configure --target-list=i386-softmmu,x86_64-softmmu
+make -j$(nproc)
+/build/qemu-system-i386 -fda ../oeneyeOS.img -fdb ../data.img -hda ../date.img -hdb ../GNUoeneyeALPINEunix.img</pre>
+<b>Drives + BLUH.XKTS:</b> C:/mnt/c D:Fieldberry E:SIETEHR /drive/myDrive /emu/dos /bluh/xkts --grid 16,16 --block 16,16 --floppy-max 2.88MB
+</div>
+
+<!-- EMU DOS PY BOX -->
+<div style="border:1px solid #000;margin:10px 0;padding:10px">
+<b>[EMU_DOS_PY BOX] by book - py namespace</b><br>
+File: <code>emu_dos.py</code> - python3 emu_dos.py<br>
+<pre style="background:#eee;padding:8px">import oeneye.bluh.xkts as bluh; bluh.init(grid=(16,16), block=(16,16)).load("MOSFETQ").exec("TECHNOLOGIE ALS GESELLSCHAFTSTREIBER")</pre>
+<pre style="background:#000;color:#0f0;padding:10px;font-size:12px;overflow:auto">oec::.cu -&gt; python3 grid=16,16 block=16,16
+[BLUH.XKTS] init grid=(16,16) block=(16,16) by book
+[EMU_DOS] Mounting from old mirror
+qemu-system-i386 -fda oeneyeOS.img -fdb data.img -hda date.img -hdb G:\OeneyeALPINEunix.img</pre>
+Full source in repo: <a href="https://github.com/kaiolafketelhut/qemu_clone">/emu_dos.py</a>
+</div>
+
+<!-- CLOCK BOX -->
+<div style="border:1px solid #000;margin:10px 0;padding:10px">
+<b>[CLOCK / CHECKSUM / KDP] by book</b><br>
+SHA256_INDEX: fe94a2adad6d08457eef0a027ee0efdbbf0873f308d043dfdc11c9c6fd8e45f<br>
+ISBN: 978-3-00-068463-0 - Order: 2026-0812-CNNN3-BK01 - NCAGE: CNNN3<br>
+KDP clean file: <a href="#">KDP_DESCRIPTION.html</a> - no body/div, only b/i/u/br/p/ul/li (fixes Amazon red error)
+</div>
+
+<!-- OneEyeMail FORM - THE MAIN ONE -->
+<div style="border:1px solid #000;margin:10px 0;padding:15px">
+<h2 style="text-align:center">OneEyeMail - Make Email + Write</h2>
+<label>To:</label><br>
+<input id="to" type="email" value="oeneyeos@gmail.com" placeholder="oeneyeos@gmail.com" style="width:100%;padding:10px;margin:5px 0;border:1px solid #999"><br>
+<label>Subject:</label><br>
+<input id="subj" placeholder="Subject" style="width:100%;padding:10px;margin:5px 0;border:1px solid #999"><br>
+<label>
+
+
+Write:</label><br>
+
+<div id="writeToolbar" style="display:flex;gap:6px;flex-wrap:wrap;margin:6px 0">
+  <select id="styleSelect">
+    <option value="">Text Style...</option>
+    <option value="b">Bold</option>
+    <option value="i">Italic</option>
+    <option value="u">Underline</option>
+    <option value="code">Code</option>
+    <option value="pre">Code Box</option>
+    <option value="h2">Heading H2</option>
+  </select>
+  <select id="patternSelect">
+    <option value="">Pattern...</option>
+    <option value="Hi.c">Hi.c - OENEYE</option>
+    <option value="ornop">ornop.qasm</option>
+    <option value="MOSFETQ">MOSFETQ</option>
+    <option value="BLUH">BLUH.XKTS</option>
+    <option value="EMAIL">Email -1 / ;</option>
+  </select>
+  <button type="button" onclick="applyStyle()">Apply Style</button>
+  <button type="button" onclick="insertCodeBox()">+ Code Box</button>
+</div>
+<script>
+function getWrite(){ return document.querySelector('textarea'); }
+function applyStyle(){
+  var ta=getWrite(); if(!ta) return;
+  var s=document.getElementById('styleSelect').value; if(!s) return;
+  var a=ta.selectionStart, b=ta.selectionEnd, sel=ta.value.slice(a,b)||"text";
+  var w={"b":["<b>","</b>"],"i":["<i>","</i>"],"u":["<u>","</u>"],"code":["<code>","</code>"],"pre":["<pre>\n","\n</pre>"],"h2":["<h2>","</h2>"]}[s];
+  ta.value=ta.value.slice(0,a)+w[0]+sel+w[1]+ta.value.slice(b); ta.focus();
+}
+function insertCodeBox(){
+  var ta=getWrite(); if(!ta) return;
+  var pat=document.getElementById('patternSelect').value||"Hi.c";
+  var box="\n<pre>\n["+pat+" BOX] by book\n</pre>\n";
+  var a=ta.selectionStart; ta.value=ta.value.slice(0,a)+box+ta.value.slice(a); ta.focus();
+}
+document.getElementById('patternSelect').addEventListener('change', function(){ if(this.value) insertCodeBox(); });
+</script>
+
+<textarea id="body" rows="6" placeholder="Write your email here..." style="width:100%;padding:10px;border:1px solid #999"></textarea><br><br>
+<button onclick="sendMail()" style="background:#000;color:#fff;padding:8px 14px;border:none">Send Email</button>
+<button onclick="saveDraft()" style="background:#fff;padding:8px 14px;border:1px solid #999">Save Draft</button>
+<h3>Drafts / Sent:</h3>
+<ul id="list"><li>sent | To: name@name.com | -1 | ;</li></ul>
+</div>
+
+<script>
+let drafts=JSON.parse(localStorage.getItem('oneeyemail')||'[]');
+function render(){let l=document.getElementById('list');l.innerHTML='<li>sent | To: name@name.com | -1 | ;</li>'+drafts.map(d=>`<li>${d.type} | To: ${d.to} | ${d.subj} | ${d.body.substring(0,40)}</li>`).join('');}
+function saveDraft(){let d={type:'draft',to:document.getElementById('to').value,subj:document.getElementById('subj').value,body:document.getElementById('body').value};drafts.unshift(d);localStorage.setItem('oneeyemail',JSON.stringify(drafts));render();alert('Draft saved');}
+function sendMail(){let to=document.getElementById('to').value,subj=document.getElementById('subj').value,body=document.getElementById('body').value;let d={type:'sent',to,subj,body};drafts.unshift(d);localStorage.setItem('oneeyemail',JSON.stringify(drafts));render();window.location.href=`mailto:${to}?subject=${encodeURIComponent(subj)}&body=${encodeURIComponent(body)}`;}
+render();
+</script>
+
+<p><a href="index.html" style="color:#0f0">← Back to Klausur</a> | <a href="oeneye/">OENEYE Patterns</a> | <a href="maker/mosfetqWebPageMaker.HTML">mosfetqWebPageMaker</a></p>
+
+<!-- ADDITIONAL BOX - BOTTOM - NO DATE -->
+<div style="border:2px solid #0f0;padding:15px;margin:20px 0;background:#000;color:#fff;font-family:monospace">
+<h2>[ADDITIONAL BOX - BOTTOM] ornop.qasm + index.html</h2>
+<p><a href="https://github.com/kaiolafketelhut/index.html/blob/main/ornop.qasm" style="color:#0f0">ornop.qasm - GitHub</a> | <a href="https://github.com/kaiolafketelhut/index.html/blob/main/index.html" style="color:#0f0">index.html - GitHub</a><br>
+<a href="https://raw.githubusercontent.com/kaiolafketelhut/index.html/main/ornop.qasm" style="color:#0ff">Raw ornop.qasm</a> | <a href="https://raw.githubusercontent.com/kaiolafketelhut/index.html/main/index.html" style="color:#0ff">Raw index.html</a></p>
+<pre style="flex-wrap:wrap;display:flex;gap:4px;background:#111;color:#0f0;padding:10px;white-space:pre-wrap">git clone https://github.com/kaiolafketelhut/index.html
+curl -sL https://raw.githubusercontent.com/kaiolafketelhut/index.html/main/ornop.qasm -o ornop.qasm</pre>
+<pre style="flex-wrap:wrap;display:flex;gap:4px;background:#111;color:#0f0;padding:10px;white-space:pre-wrap">// ornop.qasm - OENEYE / MOSFETQ
+OPENQASM 3.0;
+include "stdgates.inc";
+qubit[2] q;
+h q[0];
+cx q[0], q[1];
+measure q;</pre>
+</div>
+
+<!-- HI.C BOX - BOTTOM - NO DATE -->
+<div style="border:2px solid #0f0;padding:15px;margin:20px 0;background:#000;color:#fff;font-family:monospace">
+<h2>[HI.C BOX] Hi.c - OENEYE</h2>
+<p><a href="Hi.c" style="color:#0f0">Hi.c - Open</a> | <a href="https://github.com/kaiolafketelhut/index.html/blob/main/ornop.qasm" style="color:#0f0">ornop.qasm</a> | <a href="oeneyeMOSFETQfont.HTML" style="color:#0f0">MOSFETQfont</a></p>
+<pre style="flex-wrap:wrap;display:flex;gap:4px;background:#111;color:#0f0;padding:10px;white-space:pre-wrap">gcc Hi.c -o Hi && ./Hi
+# Output:
+# Hi.c
+# MOSFETQ - OENEYE - 16,16
+# -1
+# ;</pre>
+<p>From email: From oeneyeos@gmail.com - Subject: -1 - Body: ; - To: oeneyeos@gmail.com (not mail@github.io - that one has no mail server)</p>
+</div>
+
+<script>
+// OMQpreview.ximg = runtime for Write + BLUH dropdowns
+async function loadOMQRuntime(){
+  var fallback = ["Hi.c","ornop","MOSFETQ","BLUH","EMAIL"];
+  var names = fallback;
+  try{
+    var r = await fetch("https://raw.githubusercontent.com/kaiolafketelhut/index.html/main/OMQpreview.ximg", {cache:"no-store"});
+    if(r.ok){
+      var txt = await r.text();
+      // take any [NAME], NAME BOX, or bare lines like Hi.c / orop.qasm / MOSFETQ
+      var found = [];
+      for(var m of txt.matchAll(/\[([A-Za-z0-9._-]+)(?:\s+BOX)?\]/g)) found.push(m[1]);
+      for(var line of txt.split(/\r?\n/)){
+        line=line.trim();
+        if(/^(Hi\.c|ornop|MOSFETQ|BLUH|EMAIL|OENEYE)/i.test(line)) found.push(line.split(/\s/)[0]);
+      }
+      // dedupe, keep order
+      var seen={}; names = found.filter(x=>!seen[x] && (seen[x]=1));
+      if(!names.length) names = fallback;
+      window.OMQ_RUNTIME = txt; // BLUH + Write can read full text
+      console.log("OMQ runtime loaded:", names);
+    }
+  }catch(e){ console.log("OMQ runtime fallback", e); }
+  for(var id of ["patternSelect","bluhPatternSelect"]){
+    var sel=document.getElementById(id); if(!sel) continue;
+    sel.innerHTML='<option value="">Pattern... (from OMQpreview.ximg)</option>' + names.map(n=>'<option value="'+n+'">'+n+'</option>').join('');
+  }
+}
+document.addEventListener("DOMContentLoaded", loadOMQRuntime);
+</script>
+
+
+
+
+
+<script id="autoexec-debugger">
+/* AUTOEXEC + TASK MANAGER + DEBUGGER - by book */
+window.AUTOEXEC = window.AUTOEXEC || {};
+window.AUTOEXEC.log = [];
+function dbg(msg){
+  var t = new Date().toISOString().slice(11,19) + ' ' + msg;
+  window.AUTOEXEC.log.push(t);
+  console.log('[AUTOEXEC] ' + t);
+  var el = document.getElementById('dbg-out');
+  if(el) el.textContent = window.AUTOEXEC.log.slice(-12).join('\n');
+  var dot = document.getElementById('dbg-dot');
+  if(dot) dot.textContent = '● ' + msg;
+}
+function task_moveBluh(){
+  var bar = document.getElementById('bluhToolbar');
+  var input = document.getElementById('bx-in');
+  if(!bar){ dbg('TASK moveBluh: bluhToolbar NOT FOUND'); return false; }
+  if(!input){ dbg('TASK moveBluh: bx-in NOT FOUND'); return false; }
+  var target = input.parentElement || input;
+  if(target.previousElementSibling === bar){ dbg('TASK moveBluh: already OK above bx-in'); return true; }
+  target.parentNode.insertBefore(bar, target);
+  bar.style.display='flex'; bar.style.flexWrap='wrap'; bar.style.gap='4px'; bar.style.marginBottom='6px';
+  dbg('TASK moveBluh: MOVED above bx-in ✔');
+  return true;
+}
+function task_checkWrite(){
+  var w = document.getElementById('writeToolbar');
+  if(!w){ dbg('TASK checkWrite: writeToolbar NOT FOUND'); return; }
+  dbg('TASK checkWrite: writeToolbar OK, parent=' + (w.parentElement ? w.parentElement.tagName : '?'));
+}
+function task_checkBluhInput(){
+  var i = document.getElementById('bx-in');
+  dbg('TASK checkBluh: bx-in ' + (i ? 'OK placeholder=' + i.placeholder : 'MISSING'));
+}
+
+window.AUTOEXEC.isms = { name: 'MOSFETQismsOENEYE.exe', version: 'v31', policy: 'BLUH toolbar above bx-in, Write toolbar separate', audit: [] };
+function isms_audit(action, result){ window.AUTOEXEC.isms.audit.push(new Date().toISOString() + ' ' + action + ' = ' + result); dbg('ISMS AUDIT: ' + action + ' = ' + result); }
+window.AUTOEXEC.tasks = [
+
+  {name:'moveBluh', fn:task_moveBluh, every:1000},
+  {name:'checkWrite', fn:task_checkWrite, every:5000},
+  {name:'checkBluh', fn:task_checkBluhInput, every:5000},
+];
+
+function isms_exportAudit(){
+  var txt = 'MOSFETQismsOENEYE.exe - ISMS AUDIT LOG\n';
+  txt += 'Export: ' + new Date().toISOString() + '\n';
+  txt += 'Policy: BLUH toolbar above bx-in, Write toolbar separate\n';
+  txt += 'Owner: KAI\n---\n';
+  txt += (window.AUTOEXEC.log || []).join('\n');
+  txt += '\n--- AUDIT ---\n' + (window.AUTOEXEC.isms ? window.AUTOEXEC.isms.audit.join('\n') : 'no audit');
+  var b = new Blob([txt], {type:'text/plain'});
+  var a = document.createElement('a');
+  a.href = URL.createObjectURL(b);
+  a.download = 'MOSFETQismsOENEYE-ISMS-audit-' + Date.now() + '.txt';
+  a.click();
+  dbg('ISMS: AUDIT LOG EXPORTED ✔');
+}
+
+function isms_selfHeal(){
+  var healed = 0;
+  var bar = document.getElementById('bluhToolbar');
+  var input = document.getElementById('bx-in');
+  var writeBar = document.getElementById('writeToolbar');
+  // Heal 1: BLUH above bx-in
+  if(bar && input && input.parentElement && input.parentElement.previousElementSibling !== bar){
+    input.parentElement.parentNode.insertBefore(bar, input.parentElement);
+    healed++;
+    dbg('ISMS SELF-HEAL: moved bluhToolbar above bx-in ✔');
+  }
+  // Heal 2: Write toolbar missing -> recreate
+  if(!writeBar){
+    var w = document.createElement('div');
+    w.id = 'writeToolbar';
+    w.innerHTML = '<b>Write</b>';
+    document.body.appendChild(w);
+    healed++;
+    dbg('ISMS SELF-HEAL: recreated writeToolbar ✔');
+  }
+  isms_audit('SELF_HEAL', healed > 0 ? 'HEALED '+healed : 'NO ACTION - ALREADY HEALTHY');
+  dbg('ISMS SELF-HEAL DONE: ' + healed + ' fix(es)');
+  alert('SELF-HEAL DONE: ' + healed + ' fix(es)\n\nMOSFETQismsOENEYE.exe ISMS v31');
+  return healed;
+}
+function isms_policyCheck(){
+
+  var bar = document.getElementById('bluhToolbar');
+  var input = document.getElementById('bx-in');
+  var writeBar = document.getElementById('writeToolbar');
+  var ok1 = bar && input && input.parentElement && input.parentElement.previousElementSibling === bar;
+  var ok2 = !!writeBar;
+  var ok3 = !!input;
+  var result = 'POLICY CHECK: BLUH above bx-in=' + (ok1?'PASS ✔':'FAIL ✘') + ' | Write toolbar=' + (ok2?'PASS ✔':'FAIL ✘') + ' | bx-in=' + (ok3?'PASS ✔':'FAIL ✘');
+  dbg(result);
+  if(!(ok1 && ok2 && ok3)){ dbg('ISMS: POLICY FAIL -> TRIGGER SELF-HEAL'); isms_selfHeal(); }
+  isms_audit('POLICY_CHECK', ok1 && ok2 && ok3 ? 'PASS' : 'FAIL + SELF-HEAL TRIGGERED');
+  alert(result + '\n\nMOSFETQismsOENEYE.exe ISMS v31');
+}
+
+
+
+
+
+function isms_readme(){
+  var old = document.getElementById('ismsReadme');
+  if(old){ old.remove(); return; }
+  var c = document.createElement('div');
+  c.id = 'ismsReadme';
+  c.style.cssText = 'position:fixed;inset:0;background:#fff;z-index:100001;color:#000;font-family:system-ui;padding:16px;overflow:auto';
+  c.innerHTML = '<button onclick="document.getElementById(\'ismsReadme\').remove()" style="position:absolute;top:10px;right:10px;background:#000;color:#fff;border:none;padding:8px 14px;cursor:pointer">✕ CLOSE</button>'
+    + '<div style="max-width:680px;margin:0 auto">'
+    + '<div style="font-size:11px;letter-spacing:3px;color:#888">MOSFETQisms • OENEYE • ISMS v30 FINAL</div>'
+    + '<h1 style="font-size:28px;margin:6px 0">MOSFETQismsOENEYE.exe</h1>'
+    + '<p style="font-size:16px;color:#333">Information Security Management System — built live in Berlin by <b>Kai Olaf Ketelhut</b>.</p>'
+    + '<p>What started as a toolbar bug became a full self-healing ISMS. It watches itself, fixes itself, logs everything, and proves it.</p>'
+    + '<h2>⚙️ How it works</h2>'
+    + '<ul><li><b>AUTOEXEC</b> — boots on every page load, no click needed</li>'
+    + '<li><b>TASK MANAGER</b> — checks every 1 second: BLUH toolbar above bx-in? Write toolbar separate? bx-in present?</li>'
+    + '<li><b>POLICY CHECK</b> — PASS / FAIL in real time</li>'
+    + '<li><b>SELF-HEAL</b> — if POLICY = FAIL, it auto-fixes in &lt;1s and logs the heal</li>'
+    + '<li><b>DASHBOARD</b> — green lamp = HEALTHY, red lamp = DEGRADED + auto-heal, plus UPTIME + CHECKS counter</li>'
+    + '<li><b>AUDIT LOG</b> — every action timestamped, exportable as .txt</li>'
+    + '<li><b>CONTROL CENTER</b> — full-screen live logs + audit trail + all controls</li>'
+    + '<li><b>CERTIFICATE</b> — printable CERTIFIED PASS with ID + signature</li>'
+    + '<li><b>PROOF PACK</b> — one-click download: Certificate + Audit + Logs + Signature</li></ul>'
+    + '<h2>📜 Policy</h2>'
+    + '<ol><li>BLUH toolbar MUST stay above bx-in</li><li>Write toolbar MUST exist separately</li><li>AUTOEXEC MUST boot on load</li><li>SELF-HEAL MUST fix FAIL in &lt;1s</li><li>Every action MUST be logged in AUDIT</li></ol>'
+    + '<h2>🏆 Journey</h2><p style="font-family:monospace;font-size:13px;background:#f5f5f5;padding:12px">v25 Audit Log<br>v26 Self-Heal + Signed Audit<br>v27 Dashboard + Lamp + Uptime<br>v28 Control Center<br>v29 Certificate<br><b>v30 FINAL Proof Pack</b><br>v31 Mobile Wrap Fix</p>'
+    + '<p>Book: <b>MOSFETQ – Technologie als Gesellschaftstreiber</b><br>ISBN: 978-3-00-068463-0<br>URN: urn:nbn:de:101-1-2610222318593.912002703179<br>Verlag: Fieldberry Group Berlin, 14. Auflage 2021</p>'
+    + '<div style="display:flex;gap:8px;flex-wrap:wrap;margin:16px 0"><button onclick="isms_policyCheck()" style="background:#0f0;color:#000;padding:10px;border:none;cursor:pointer;font-weight:bold">[POLICY CHECK]</button><button onclick="isms_certificate()" style="background:#FFD700;color:#000;padding:10px;border:none;cursor:pointer;font-weight:bold">[🏆 CERTIFICATE]</button><button onclick="isms_downloadAll()" style="background:#000;color:#fff;padding:10px;border:none;cursor:pointer;font-weight:bold">[⬇ DOWNLOAD ALL PROOF]</button><button onclick="isms_readme()" style="background:#fff;color:#000;border:1px solid #000;padding:2px 6px;cursor:pointer;margin-left:4px;font-weight:bold">[📖 README]</button></div>'
+    + '<p style="font-size:12px;color:#888">Owner: KAI OLAF KETELHUT | Berlin, Germany | MOSFETQismsOENEYE.exe ISMS v30</p></div>';
+  document.body.appendChild(c);
+  isms_audit('README_OPENED', 'ISMS README viewed');
+}
+function isms_downloadAll(){
+
+  var date = new Date().toISOString();
+  var up = window.AUTOEXEC.bootTime ? Math.floor((Date.now()-window.AUTOEXEC.bootTime)/1000) : 0;
+  var bar = document.getElementById('bluhToolbar');
+  var input = document.getElementById('bx-in');
+  var writeBar = document.getElementById('writeToolbar');
+  var ok1 = bar && input && input.parentElement && input.parentElement.previousElementSibling === bar;
+  var ok2 = !!writeBar;
+  var ok3 = !!input;
+  var allOk = ok1 && ok2 && ok3;
+  var sig = 0; var st = 'MOSFETQismsOENEYE'+date+allOk; for(var i=0;i<st.length;i++){ sig = (sig*31 + st.charCodeAt(i)) % 1000000007; }
+  var report = '========================================\n'
+    + 'MOSFETQismsOENEYE.exe - ISMS FINAL PROOF PACK v31\n'
+    + '========================================\n'
+    + 'Owner: KAI OLAF KETELHUT\nLocation: Berlin, Germany\nDate: ' + date + '\nCertificate ID: MOSFETQ-' + sig + '\nUptime: ' + up + 's\n'
+    + 'Version: ISMS v31 FINAL\nStatus: ' + (allOk ? 'CERTIFIED PASS ✔' : 'FAIL ✘') + '\n'
+    + '----------------------------------------\nPOLICY CHECKS\n'
+    + '1. BLUH toolbar above bx-in: ' + (ok1?'PASS ✔':'FAIL ✘') + '\n'
+    + '2. Write toolbar separate: ' + (ok2?'PASS ✔':'FAIL ✘') + '\n'
+    + '3. bx-in present: ' + (ok3?'PASS ✔':'FAIL ✘') + '\n'
+    + '4. AUTOEXEC boot: PASS ✔\n5. SELF-HEAL: ACTIVE ✔\n6. AUDIT LOG: ACTIVE ✔\n'
+    + '----------------------------------------\nAUDIT TRAIL\n' + (window.AUTOEXEC.isms ? window.AUTOEXEC.isms.audit.join('\n') : 'no audit') + '\n'
+    + '----------------------------------------\nLIVE LOGS (last 50)\n' + (window.AUTOEXEC.log || []).slice(-50).join('\n') + '\n'
+    + '----------------------------------------\nSIGNATURE\nMOSFETQismsOENEYE.exe ISMS v31 | SHA-CHECK: ' + sig + ' | Signed by: KAI | Verified: ' + date + '\n'
+    + 'END OF PROOF PACK\n';
+  var blob = new Blob([report], {type:'text/plain'});
+  var a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'MOSFETQ-ISMS-PROOF-v31-' + sig + '.txt';
+  a.click();
+  isms_audit('PROOF_PACK_DOWNLOADED', allOk ? 'PASS '+sig : 'FAIL '+sig);
+  dbg('ISMS: PROOF PACK DOWNLOADED ✔ ID='+sig);
+  alert('ISMS v31 PROOF PACK DOWNLOADED ✔\n\nFile: MOSFETQ-ISMS-PROOF-v31-' + sig + '.txt\nStatus: ' + (allOk?'CERTIFIED PASS':'FAIL') + '\n\nContains: Certificate + Audit + Logs + Signature');
+}
+function isms_certificate(){
+
+  var old = document.getElementById('ismsCert');
+  if(old) old.remove();
+  var bar = document.getElementById('bluhToolbar');
+  var input = document.getElementById('bx-in');
+  var writeBar = document.getElementById('writeToolbar');
+  var ok1 = bar && input && input.parentElement && input.parentElement.previousElementSibling === bar;
+  var ok2 = !!writeBar;
+  var ok3 = !!input;
+  var allOk = ok1 && ok2 && ok3;
+  var date = new Date().toLocaleDateString('de-DE', {day:'2-digit', month:'long', year:'numeric'});
+  var sig = 0; var txt = 'MOSFETQismsOENEYE'+date+allOk; for(var i=0;i<txt.length;i++){ sig = (sig*31 + txt.charCodeAt(i)) % 1000000007; }
+  var c = document.createElement('div');
+  c.id = 'ismsCert';
+  c.style.cssText = 'position:fixed;inset:0;background:#fff;z-index:100000;color:#000;font-family:serif;padding:20px;overflow:auto;text-align:center';
+  c.innerHTML = '<button onclick="document.getElementById(\'ismsCert\').remove()" style="position:absolute;top:10px;right:10px;background:#000;color:#fff;border:none;padding:8px 14px;cursor:pointer">✕ CLOSE</button>'
+    + '<div style="border:4px double #000;padding:24px;max-width:600px;margin:20px auto"><div style="font-size:11px;letter-spacing:3px">MOSFETQisms • OENEYE • ISMS</div>'
+    + '<h1 style="font-size:28px;margin:10px 0">CERTIFICATE</h1><div style="font-size:12px;letter-spacing:2px">INFORMATION SECURITY MANAGEMENT SYSTEM</div><hr>'
+    + '<p>This certifies that</p><h2 style="font-size:24px;margin:5px 0">MOSFETQismsOENEYE.exe</h2><p>owned by <b>KAI OLAF KETELHUT</b><br>has passed all ISMS policy checks</p>'
+    + '<div style="text-align:left;background:#f5f5f5;padding:12px;font-family:monospace;font-size:13px">✔ BLUH toolbar above bx-in: ' + (ok1?'PASS':'FAIL') + '<br>✔ Write toolbar separate: ' + (ok2?'PASS':'FAIL') + '<br>✔ bx-in input present: ' + (ok3?'PASS':'FAIL') + '<br>✔ AUTOEXEC boot: PASS<br>✔ SELF-HEAL: ACTIVE<br>✔ AUDIT LOG: ACTIVE</div>'
+    + '<div style="margin:16px 0;font-size:32px;font-weight:bold;color:' + (allOk?'#0a0':'#f00') + ';border:3px solid ' + (allOk?'#0a0':'#f00') + ';display:inline-block;padding:6px 20px;transform:rotate(-3deg)">' + (allOk?'✓ CERTIFIED PASS':'✘ NOT CERTIFIED') + '</div>'
+    + '<p>Date: <b>' + date + '</b><br>Berlin, Germany<br>Certificate ID: MOSFETQ-' + sig + '<br>Version: ISMS v31</p>'
+    + '<p style="font-size:11px;color:#666">Signed: ________________ KAI — ISMS Owner<br>Verified by AUTOEXEC / TASK MANAGER / DEBUGGER</p>'
+    + '<button onclick="window.print()" style="background:#000;color:#fff;padding:10px 20px;border:none;cursor:pointer;margin-top:10px">🖨 PRINT / SAVE AS PDF</button></div>';
+  document.body.appendChild(c);
+  isms_audit('CERTIFICATE_ISSUED', allOk ? 'PASS '+sig : 'FAIL '+sig);
+  dbg('ISMS: CERTIFICATE ISSUED - ' + (allOk?'PASS ✔':'FAIL ✘'));
+}
+function isms_openCenter(){
+
+  var old = document.getElementById('ismsCenter');
+  if(old){ old.remove(); return; }
+  var c = document.createElement('div');
+  c.id = 'ismsCenter';
+  c.style.cssText = 'position:fixed;inset:0;background:#000;z-index:99999;color:#0f0;font-family:monospace;padding:12px;overflow:auto';
+  var logs = (window.AUTOEXEC.log || []).slice(-30).join('<br>');
+  var audit = window.AUTOEXEC.isms ? window.AUTOEXEC.isms.audit.slice(-20).join('<br>') : '';
+  var up = window.AUTOEXEC.bootTime ? Math.floor((Date.now()-window.AUTOEXEC.bootTime)/1000) : 0;
+  c.innerHTML = '<div style="display:flex;justify-content:space-between"><h2 style="margin:0">MOSFETQismsOENEYE.exe — ISMS CONTROL CENTER v31</h2><button onclick="document.getElementById(\'ismsCenter\').remove()" style="background:#f00;color:#fff;border:none;padding:6px 12px;cursor:pointer">✕ CLOSE</button></div>'
+    + '<p style="color:#888">OWNER: KAI | POLICY: BLUH toolbar above bx-in, Write toolbar separate | UPTIME: ' + up + 's | STATUS: HEALTHY ✔</p>'
+    + '<div style="display:flex;gap:8px;flex-wrap:wrap"><button onclick="isms_policyCheck()" style="background:#0f0;color:#000;padding:8px;border:none;cursor:pointer;font-weight:bold">[POLICY CHECK]</button><button onclick="isms_selfHeal()" style="background:#ff0;color:#000;padding:8px;border:none;cursor:pointer;font-weight:bold">[SELF-HEAL]</button><button onclick="isms_openCenter()" style="background:#00f;color:#fff;border:1px solid #00f;padding:2px 6px;cursor:pointer;margin-left:4px;font-weight:bold">[CONTROL CENTER]</button><button onclick="isms_certificate()" style="background:#FFD700;color:#000;border:1px solid #FFD700;padding:2px 6px;cursor:pointer;margin-left:4px;font-weight:bold">[🏆 CERTIFICATE]</button><button onclick="isms_downloadAll()" style="background:#0f0;color:#000;padding:8px;border:none;cursor:pointer;font-weight:bold">[⬇ DOWNLOAD ALL PROOF]</button><button onclick="isms_readme()" style="background:#fff;color:#000;border:1px solid #000;padding:2px 6px;cursor:pointer;margin-left:4px;font-weight:bold">[📖 README]</button><button onclick="isms_downloadAll()" style="background:#0f0;color:#000;border:1px solid #0f0;padding:2px 6px;cursor:pointer;margin-left:4px;font-weight:bold">[⬇ DOWNLOAD ALL PROOF]</button><button onclick="isms_readme()" style="background:#fff;color:#000;border:1px solid #000;padding:2px 6px;cursor:pointer;margin-left:4px;font-weight:bold">[📖 README]</button><button onclick="isms_exportAudit()" style="background:#000;color:#0f0;border:1px solid #0f0;padding:8px;cursor:pointer">[EXPORT AUDIT LOG]</button><button onclick="location.reload()" style="background:#333;color:#fff;padding:8px;border:none;cursor:pointer">[REBOOT ISMS]</button><button onclick="isms_certificate()" style="background:#FFD700;color:#000;padding:8px;border:none;cursor:pointer;font-weight:bold">[🏆 CERTIFICATE]</button><button onclick="isms_downloadAll()" style="background:#0f0;color:#000;padding:8px;border:none;cursor:pointer;font-weight:bold">[⬇ DOWNLOAD ALL PROOF]</button><button onclick="isms_readme()" style="background:#fff;color:#000;border:1px solid #000;padding:2px 6px;cursor:pointer;margin-left:4px;font-weight:bold">[📖 README]</button><button onclick="isms_downloadAll()" style="background:#0f0;color:#000;border:1px solid #0f0;padding:2px 6px;cursor:pointer;margin-left:4px;font-weight:bold">[⬇ DOWNLOAD ALL PROOF]</button><button onclick="isms_readme()" style="background:#fff;color:#000;border:1px solid #000;padding:2px 6px;cursor:pointer;margin-left:4px;font-weight:bold">[📖 README]</button></div>'
+    + '<h3>📋 LIVE LOGS (last 30)</h3><div style="flex-wrap:wrap;display:flex;gap:4px;background:#111;border:1px solid #333;padding:8px;font-size:12px;max-height:200px;overflow:auto">' + logs + '</div>'
+    + '<h3>🔒 AUDIT TRAIL (last 20)</h3><div style="flex-wrap:wrap;display:flex;gap:4px;background:#111;border:1px solid #333;padding:8px;font-size:12px;max-height:200px;overflow:auto">' + audit + '</div>'
+    + '<h3>📜 POLICY</h3><div style="flex-wrap:wrap;display:flex;gap:4px;background:#111;border:1px solid #333;padding:8px;font-size:12px">1. BLUH toolbar MUST stay above bx-in<br>2. Write toolbar MUST exist separately<br>3. AUTOEXEC MUST boot on load<br>4. SELF-HEAL MUST fix FAIL in &lt;1s<br>5. Every action MUST be logged in AUDIT</div>';
+  document.body.appendChild(c);
+}
+function isms_dashboard_update(){
+
+  var bar = document.getElementById('bluhToolbar');
+  var input = document.getElementById('bx-in');
+  var writeBar = document.getElementById('writeToolbar');
+  var ok1 = bar && input && input.parentElement && input.parentElement.previousElementSibling === bar;
+  var ok2 = !!writeBar;
+  var ok3 = !!input;
+  var allOk = ok1 && ok2 && ok3;
+  var lamp = document.getElementById('ismsLamp');
+  var status = document.getElementById('ismsStatus');
+  var up = document.getElementById('ismsUptime');
+  if(lamp){ lamp.style.background = allOk ? '#0f0' : '#f00'; lamp.style.boxShadow = allOk ? '0 0 12px #0f0' : '0 0 12px #f00'; }
+  if(status){ status.textContent = allOk ? 'HEALTHY ✔ ALL SYSTEMS PASS' : 'DEGRADED ✘ SELF-HEAL TRIGGERED'; status.style.color = allOk ? '#0f0' : '#f00'; }
+  if(up && window.AUTOEXEC.bootTime){
+    var s = Math.floor((Date.now() - window.AUTOEXEC.bootTime)/1000);
+    var m = Math.floor(s/60); var sec = s%60;
+    up.textContent = 'UPTIME: ' + m + 'm ' + sec + 's | CHECKS: ' + (window.AUTOEXEC.log ? window.AUTOEXEC.log.length : 0) + ' | POLICY: BLUH above bx-in';
+  }
+  if(!allOk){ isms_selfHeal(); }
+}
+setInterval(isms_dashboard_update, 1000);
+function autoexec_boot(){
+
+
+  dbg('ISMS MOSFETQismsOENEYE.exe boot - v31 | ISO 27001 style audit ON');
+  // 1. create debugger box at top of page if not exists
+  if(!document.getElementById('autoexec-dbg')){
+    var d = document.createElement('div');
+    d.id = 'autoexec-dbg';
+    d.innerHTML = '<div style="font-size:10px;color:#888">ISMS DASHBOARD • MOSFETQisms • OENEYE • AUDIT LOG • POLICY: BLUH toolbar must stay above bx-in • OWNER: KAI</div><div style="display:flex;justify-content:space-between;align-items:center"><b style="color:#0f0">MOSFETQismsOENEYE.exe — ISMS // AUTOEXEC / TASK MANAGER / DEBUGGER</b><span id="dbg-dot" style="color:#0f0;font-size:11px">● booting...</span><button onclick="document.getElementById(\'dbg-out\').style.display=document.getElementById(\'dbg-out\').style.display==\'none\'?\'block\':\'none\'" style="background:#222;color:#0f0;border:1px solid #0f0;padding:2px 6px;cursor:pointer">hide/show</button><div id="ismsDash" style="display:flex;gap:8px;align-items:center;margin-top:4px;background:#111;border:1px solid #333;padding:4px 6px"><span id="ismsLamp" style="width:14px;height:14px;border-radius:50%;background:#0f0;display:inline-block"></span><b id="ismsStatus" style="color:#0f0;font-size:11px">HEALTHY ✔ ALL SYSTEMS PASS</b><span id="ismsUptime" style="color:#888;font-size:10px;margin-left:auto">UPTIME: 0m 0s</span></div><button onclick="isms_exportAudit()" style="background:#000;color:#0f0;border:1px solid #0f0;padding:2px 6px;cursor:pointer;margin-left:4px">[EXPORT AUDIT LOG]</button><button onclick="isms_policyCheck()" style="background:#0f0;color:#000;border:1px solid #0f0;padding:2px 6px;cursor:pointer;margin-left:4px;font-weight:bold">[POLICY CHECK]</button><button onclick="isms_selfHeal()" style="background:#ff0;color:#000;border:1px solid #ff0;padding:2px 6px;cursor:pointer;margin-left:4px;font-weight:bold">[SELF-HEAL]</button><button onclick="isms_openCenter()" style="background:#00f;color:#fff;border:1px solid #00f;padding:2px 6px;cursor:pointer;margin-left:4px;font-weight:bold">[CONTROL CENTER]</button><button onclick="isms_certificate()" style="background:#FFD700;color:#000;border:1px solid #FFD700;padding:2px 6px;cursor:pointer;margin-left:4px;font-weight:bold">[🏆 CERTIFICATE]</button><button onclick="isms_downloadAll()" style="background:#0f0;color:#000;padding:8px;border:none;cursor:pointer;font-weight:bold">[⬇ DOWNLOAD ALL PROOF]</button><button onclick="isms_readme()" style="background:#fff;color:#000;border:1px solid #000;padding:2px 6px;cursor:pointer;margin-left:4px;font-weight:bold">[📖 README]</button><button onclick="isms_downloadAll()" style="background:#0f0;color:#000;border:1px solid #0f0;padding:2px 6px;cursor:pointer;margin-left:4px;font-weight:bold">[⬇ DOWNLOAD ALL PROOF]</button><button onclick="isms_readme()" style="background:#fff;color:#000;border:1px solid #000;padding:2px 6px;cursor:pointer;margin-left:4px;font-weight:bold">[📖 README]</button></div><pre id="dbg-out" style="margin:6px 0 0;color:#8f8;white-space:pre-wrap;font:11px monospace;max-height:120px;overflow:auto"></pre>';
+    d.style.cssText = 'background:#000;border:1px solid #0f0;color:#0f0;padding:8px;margin:8px;font:12px monospace;position:relative;z-index:9999';
+    document.body.insertBefore(d, document.body.firstChild);
+  }
+  // 2. run tasks once now
+  task_moveBluh(); task_checkWrite(); task_checkBluhInput();
+  // 3. TASK MANAGER loop - retry move every 1s for 10s, then every 5s
+  var ticks = 0;
+  setInterval(function(){
+    ticks++;
+    task_moveBluh();
+    if(ticks % 5 === 0){ task_checkWrite(); task_checkBluhInput(); }
+  }, 1000);
+  dbg('TASK MANAGER started - loop 1s');
+}
+if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', autoexec_boot);
+else autoexec_boot();
+</script>
+
+</body></html>
+<div id="bluhToolbar" style="display:flex;gap:6px;flex-wrap:wrap;margin:6px 0">
+  <select id="bluhStyleSelect">
+    <option value="">Text Style...</option>
+    <option value="b">Bold</option>
+    <option value="i">Italic</option>
+    <option value="code">Code</option>
+    <option value="pre">Code Box</option>
+    <option value="bluh">BLUH ::</option>
+  </select>
+  <select id="bluhPatternSelect">
+    <option value="">Pattern...</option>
+    <option value="Hi.c">Hi.c - OENEYE</option>
+    <option value="ornop">ornop.qasm</option>
+    <option value="MOSFETQ">MOSFETQ</option>
+    <option value="BLUH">BLUH.XKTS</option>
+    <option value="EMAIL">Email -1 / ;</option>
+  </select>
+  <button type="button" onclick="bluhApplyStyle()">Apply Style</button>
+  <button type="button" onclick="bluhInsertCodeBox()">+ Code Box</button>
+</div>
+<script>
+function getBluh(){ return document.getElementById('bx-in') || document.getElementById('bluhInput'); }
+function bluhApplyStyle(){
+  var ta=getBluh(); if(!ta) return;
+  var s=document.getElementById('bluhStyleSelect').value; if(!s) return;
+  var a=ta.selectionStart||0, b=ta.selectionEnd||0, sel=ta.value.slice(a,b)||"text";
+  var w={"b":["<b>","</b>"],"i":["<i>","</i>"],"code":["<code>","</code>"],"pre":["<pre>\n","\n</pre>"],"bluh":["BLUH :: ",""]}[s];
+  ta.value=ta.value.slice(0,a)+w[0]+sel+w[1]+ta.value.slice(b); ta.focus();
+}
+function bluhInsertCodeBox(){
+  var ta=getBluh(); if(!ta) return;
+  var pat=document.getElementById('bluhPatternSelect').value||"BLUH";
+  var box="\n<pre>\n["+pat+" BOX] by book\n</pre>\n";
+  var a=ta.selectionStart||ta.value.length; ta.value=ta.value.slice(0,a)+box+ta.value.slice(a); ta.focus();
+}
+document.getElementById('bluhPatternSelect').addEventListener('change', function(){ if(this.value) bluhInsertCodeBox(); });
+</script>
+

@@ -1,0 +1,49 @@
+<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1"><title>oeneyeNASM</title></head>
+<body style="background:#000;color:#fff;font-family:monospace;padding:15px">
+<h1>oeneyeNASM - MOSFETQ Font in Assembly</h1>
+<p><a href="oeneyeMOSFETQfont.HTML" style="color:#0f0">← Back to MOSFETQfont</a> | <a href="oeneyeSandbox.HTML" style="color:#0f0">Sandbox →</a></p>
+<div style="border:2px solid #0f0;padding:12px"><b>[NASM BOX] - 16-bit - BLUH.XKTS grid 16,16</b>
+<pre style="background:#111;color:#0f0;padding:12px;overflow:auto">; oeneyeNASM.asm - MOSFETQ font
+; nasm -f bin oeneyeNASM.asm -o oeneyeOS.img
+; qemu-system-i386 -fda oeneyeOS.img
+
+[org 0x7c00]
+[bits 16]
+start:
+  mov ax, 0x0003
+  int 0x10
+  mov si, msg
+print:
+  lodsb
+  or al, al
+  jz done
+  mov ah, 0x0e
+  mov bx, 0x0007
+  int 0x10
+  jmp print
+done:
+  hlt
+msg db 'MOSFETQ - OENEYE - 16x16', 0
+times 510-($-$$) db 0
+dw 0xAA55</pre>
+<p>Build: <code>nasm -f bin oeneyeNASM.asm -o oeneyeOS.img && qemu-system-i386 -fda oeneyeOS.img</code></p>
+</div>
+<div style="border:2px solid #0f0;padding:12px;margin-top:10px"><b>[EMU_DOS_PY BOX]</b><pre style="background:#111;color:#0f0;padding:10px">import oeneye.bluh.xkts as bluh
+bluh.init(grid=(16,16), block=(16,16)).load("MOSFETQ").exec("TECHNOLOGIE ALS GESELLSCHAFTSTREIBER")</pre></div>
+
+<!-- ADDITIONAL BOX - BOTTOM - NO DATE -->
+<div style="border:2px solid #0f0;padding:15px;margin:20px 0;background:#000;color:#fff;font-family:monospace">
+<h2>[ADDITIONAL BOX - BOTTOM] ornop.qasm + index.html</h2>
+<p><a href="https://github.com/kaiolafketelhut/index.html/blob/main/ornop.qasm" style="color:#0f0">ornop.qasm - GitHub</a> | <a href="https://github.com/kaiolafketelhut/index.html/blob/main/index.html" style="color:#0f0">index.html - GitHub</a><br>
+<a href="https://raw.githubusercontent.com/kaiolafketelhut/index.html/main/ornop.qasm" style="color:#0ff">Raw ornop.qasm</a> | <a href="https://raw.githubusercontent.com/kaiolafketelhut/index.html/main/index.html" style="color:#0ff">Raw index.html</a></p>
+<pre style="background:#111;color:#0f0;padding:10px;white-space:pre-wrap">git clone https://github.com/kaiolafketelhut/index.html
+curl -sL https://raw.githubusercontent.com/kaiolafketelhut/index.html/main/ornop.qasm -o ornop.qasm</pre>
+<pre style="background:#111;color:#0f0;padding:10px;white-space:pre-wrap">// ornop.qasm - OENEYE / MOSFETQ
+OPENQASM 3.0;
+include "stdgates.inc";
+qubit[2] q;
+h q[0];
+cx q[0], q[1];
+measure q;</pre>
+</div>
+</body></html>

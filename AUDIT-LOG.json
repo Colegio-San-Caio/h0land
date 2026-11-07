@@ -1,0 +1,34 @@
+{
+  "system": "MOSFETQismsOENEYE.exe",
+  "version": "v41",
+  "owner": "KAI OLAF KETELHUT",
+  "generated": "06.11.2026 13:37:12",
+  "checks": [
+    {
+      "id": 1,
+      "name": "BLUH above bx-in",
+      "result": "PASS"
+    },
+    {
+      "id": 2,
+      "name": "Write toolbar separate",
+      "result": "PASS"
+    },
+    {
+      "id": 3,
+      "name": "AUTOEXEC boot",
+      "result": "PASS"
+    },
+    {
+      "id": 4,
+      "name": "SELF-HEAL <1s",
+      "result": "PASS"
+    },
+    {
+      "id": 5,
+      "name": "Audit log",
+      "result": "PASS"
+    }
+  ],
+  "result": "CERTIFIED PASS"
+}

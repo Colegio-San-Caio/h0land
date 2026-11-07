@@ -1,0 +1,29 @@
+MOSFETQismsOENEYE.exe — ISMS v41 PROOF PACK
+
+Owner: KAI OLAF KETELHUT, Berlin
+Book: MOSFETQ – Technologie als Gesellschaftstreiber
+ISBN: 978-3-00-068463-0
+URN: urn:nbn:de:101-1-2610222318593.912002703179
+Verlag: Fieldberry Group Berlin, 14. Auflage 2021
+Certificate ID: MOSFETQ-v41-2026-11-06-BERLIN
+Generated: 06.11.2026 13:37:12
+Live: https://kaiolafketelhut.github.io/index.html
+ISMS: https://kaiolafketelhut.github.io/isms.html
+Links: https://kaiolafketelhut.github.io/links.html
+
+POLICY CHECK (v41):
+1. BLUH above bx-in ......... PASS
+2. Write toolbar separate ... PASS
+3. AUTOEXEC must boot ...... PASS
+4. SELF-HEAL <1s ............ PASS
+5. Every action logged ...... PASS
+RESULT: CERTIFIED PASS • SELF-HEALING • AUDITED
+
+FILES IN THIS PACK:
+- index.html (47174 bytes) sha256:e91d32ad4911ac1d
+- isms.html (5570 bytes) sha256:792fa7fa31423140
+- flyer.html (4073 bytes) sha256:2b0f802e10e5c4b2
+- flyer-de.html (4323 bytes) sha256:7ed8c5e0d15915b1
+- links.html (8010 bytes) sha256:1ccd0a7653a1249a
+
+Signature: KAI OLAF KETELHUT • Berlin • 06.11.2026 13:37:12

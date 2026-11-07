@@ -1,0 +1,42 @@
+<style id="din-print-1zu1">
+@page { size: A4 portrait; margin: 0; }
+@media print {
+  html, body { margin:0 !important; padding:0 !important; background:#fff !important; }
+  body { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .page, body > div, main, .container { width: 210mm !important; min-height: 297mm !important; max-width: 210mm !important; margin: 0 !important; padding: 20mm 20mm 20mm 25mm !important; box-shadow: none !important; border: 0 !important; background: #fff !important; box-sizing: border-box; }
+  /* DIN 5008: Anschriftenfeld stays at 45mm from top - keep header */
+  .din5008 { display: block !important; }
+  /* Hide interactive stuff on paper, keep QR + Barcode */
+  #qxdf, #qxdlive, #qxdsug, #qxdnnav, #plainnav, #hubnav, button, input, form { display: none !important; }
+  a { color: #000 !important; text-decoration: none !important; }
+  img { max-width: 100% !important; }
+  /* Force QR + Barcode to print */
+  img[src*="qrserver"], img[src*="barcode"] { display: block !important; }
+  .din-footer, [class*="din-footer"] { position: relative; break-inside: avoid; }
+  /* Page break helper: each .page = 1 sheet */
+  .page { break-after: page; page-break-after: always; }
+  .page:last-child { break-after: auto; page-break-after: auto; }
+}
+@media screen {
+  .page { box-shadow: 0 0 12px rgba(0,0,0,.15); }
+}
+</style>
+<div class="din-print-note" style="display:none;">DIN 5008 1:1 A4 - Aktenzeichen: 2026-0812-CNNN3-BK01</div><!doctype html>
+<meta charset="utf-8">
+<title>BLUH :: COBOL</title>
+<style>
+body{background:#000;margin:20px}
+.box{border:1px solid #1c2430;
+border-radius:10px;padding:12px;
+background:#0d1014;color:#3dff9a;
+font:13px monospace}
+</style>
+<div class="box">
+<b>OBSIDIAN MAINFRAME :: BLUH</b>
+<p>GRID 016x016 BLOCK 016x016</p>
+<pre>[STUB] GREETINGS, OPERATOR.</pre>
+</div>
+<div style="display:flex;gap:16px;align-items:flex-start;margin-top:6mm;border-top:0.5pt solid #000;padding-top:4mm;flex-wrap:wrap;">
+<div style="text-align:center;"><img src="https://api.qrserver.com/v1/create-qr-code/?size=110x110&data=https://kaiolafketelhut.github.io/bluh_cob.html%3FAZ=2026-0812-CNNN3-BK01" alt="QR bluh_cob.html" style="width:110px;height:110px;"><div style="font-size:7pt;color:#666;">QR &bull; bluh_cob.html<br>Aktenzeichen: 2026-0812-CNNN3-BK01</div></div>
+<div style="text-align:center;"><img src="https://barcode.tec-it.com/barcode.ashx?data=2026-0812-CNNN3-BK01&code=Code128&translate-eb=1" alt="Barcode 2026-0812-CNNN3-BK01" style="height:55px;max-width:260px;"><div style="font-size:8pt;letter-spacing:2px;">2026-0812-CNNN3-BK01</div><div style="font-size:7pt;color:#666;">Barcode Code128 &bull; Verfasser: KAI OLAF KETELHUT</div></div>
+<div style="font-size:8pt;color:#666;max-width:220px;">DIN 5008 &bull; A4 1:1<br>Pr&uuml;fen: QR scannen &rarr;<br>kaiola...github.io/bluh_cob.html<br>oeneye ISMS v48</div></div>

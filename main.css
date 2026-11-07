@@ -1,0 +1,22 @@
+/* MAIN.FNT - CSS - Cluster h0land - Canonical Main File */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body { font-family: sans-serif; background: #0a0a0a; color: #fff; text-align: center; }
+
+header { padding: 24px; background: linear-gradient(90deg, #ffcc00, #00ccff, #ff00cc); color: #000; }
+header h1 { font-size: 2.5rem; letter-spacing: 2px; }
+header p { margin-top: 8px; }
+
+main { display: flex; flex-wrap: wrap; gap: 16px; padding: 20px; justify-content: center; }
+
+section { flex: 1 1 280px; max-width: 380px; padding: 20px; border: 2px solid #ffcc00; border-radius: 12px; text-align: left; }
+#css { border-color: #00ccff; }
+#js { border-color: #ff00cc; }
+
+section h2 { margin-bottom: 10px; }
+section p, section ul { margin-bottom: 12px; line-height: 1.5; }
+
+button { padding: 10px 16px; border: none; border-radius: 8px; background: #00ccff; color: #000; font-weight: bold; cursor: pointer; }
+button:hover { background: #fff; }
+
+footer { padding: 16px; font-size: 0.9rem; opacity: 0.8; }

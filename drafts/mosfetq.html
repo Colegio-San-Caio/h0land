@@ -1,0 +1,63 @@
+<!doctype html><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>MOSFETQ</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;height:100vh;overflow:hidden;font:15px system-ui,sans-serif;color:#fff;background:linear-gradient(135deg,#0b3d91,#1a73e8 60%,#34a853)}
+#top{position:fixed;top:0;left:0;right:0;height:26px;display:flex;justify-content:space-between;padding:4px 12px;font-size:13px;background:#0006;z-index:9998}
+#desk{position:fixed;inset:26px 0 48px 0}
+.win{position:absolute;width:min(420px,92vw);height:300px;background:#fff;color:#000;border-radius:10px;box-shadow:0 8px 30px #0006;display:flex;flex-direction:column;overflow:hidden}
+.win.max{inset:0!important;width:auto;height:auto;border-radius:0}
+.win.l{left:0!important;top:0!important;width:50%;height:100%}
+.win.r{left:50%!important;top:0!important;width:50%;height:100%}
+.bar{background:#e8eaed;padding:6px 10px;display:flex;justify-content:space-between;align-items:center;touch-action:none;cursor:move}
+.bar button{border:0;background:none;font-size:16px;padding:2px 8px}
+.body{flex:1;overflow:auto;padding:8px;display:flex;flex-direction:column}
+.body iframe{flex:1;border:0;margin-top:6px}
+.body textarea{flex:1;border:0;outline:0;resize:none;font:inherit}
+.body input{padding:6px;font:inherit}
+pre{margin:0;white-space:pre-wrap;font:13px monospace;flex:1}
+#shelf{position:fixed;bottom:0;left:0;right:0;height:48px;background:#202124ee;display:flex;align-items:center;gap:6px;padding:0 10px;overflow-x:auto;z-index:9997}
+#shelf button{background:#3c4043;color:#fff;border:0;border-radius:20px;padding:6px 12px;font-size:14px;white-space:nowrap}
+#clock{margin-left:auto}
+#lock{position:fixed;inset:0;z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;background:linear-gradient(160deg,#050a1a,#0b3d91);text-align:center}
+#lock h1{font-size:64px;margin:0;font-weight:300}
+#lock p{opacity:.7}
+</style>
+<div id=lock><h1 id=lt></h1><p>MOSFETQ · powered by Android</p><p>Tap to unlock</p></div>
+<div id=top><span>MOSFETQ</span><span id=st>📶 🔋</span></div>
+<div id=desk></div>
+<div id=shelf></div>
+<script>
+const $=s=>document.querySelector(s),desk=$('#desk'),shelf=$('#shelf');
+let z=1;
+const tick=()=>{const t=new Date().toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'});$('#lt').textContent=t;$('#clock').textContent=t};
+setInterval(tick,1000);
+$('#lock').onclick=()=>$('#lock').style.display='none';
+try{navigator.getBattery().then(b=>{const u=()=>$('#st').textContent='📶 🔋'+Math.round(b.level*100)+'%';u();b.onlevelchange=u})}catch(e){}
+const apps={
+Files(b){b.innerHTML='<ul style="list-style:none;padding:0;line-height:2">'+['docs/','oeneyeos.deb','BlackHat.sh','oeneye-cuda-demo/','MOSFETQ-DOS.img'].map(f=>'<li>'+(f.endsWith('/')?'📁 ':'📄 ')+f).join('')+'</ul>'},
+Browser(b,u0){const i=document.createElement('input'),f=document.createElement('iframe');i.placeholder='URL, then Enter';const go=()=>{let u=i.value.trim();if(!/^https?:|^[.\/\w-]+\.html?$|\/$/.test(u))u='https://'+u;f.src=u};i.onkeydown=e=>{if(e.key=='Enter')go()};if(u0){i.value=u0;go()}b.append(i,f)},
+CUDA(b){apps.Browser(b,'oeneye-cuda-demo/')},
+Notes(b){const t=document.createElement('textarea');try{t.value=localStorage.getItem('notes')||''}catch(e){}t.oninput=()=>{try{localStorage.setItem('notes',t.value)}catch(e){}};b.append(t)},
+Terminal(b){const p=document.createElement('pre'),i=document.createElement('input');p.textContent='MOSFETQ shell. Type help\n';i.placeholder='$';i.onkeydown=e=>{if(e.key!='Enter')return;const c=i.value.trim();i.value='';let o='';if(c=='help')o='help date echo clear whoami uname';else if(c=='date')o=new Date().toString();else if(c=='whoami')o='kai';else if(c=='uname')o='MOSFETQ 1.0 (Android-powered, '+navigator.platform+')';else if(c=='clear'){p.textContent='';return}else if(c.startsWith('echo '))o=c.slice(5);else if(c)o=c+': command not found';p.textContent+='$ '+c+'\n'+o+'\n'};b.append(p,i)},
+Settings(b){b.innerHTML='<label>Wallpaper <input type=color value=#1a73e8></label>';b.querySelector('input').oninput=e=>{document.body.style.background=e.target.value}}
+};
+function openApp(n){
+const w=document.createElement('div');w.className='win';
+w.style.left=10+Math.random()*50+'px';w.style.top=10+Math.random()*50+'px';w.style.zIndex=++z;
+w.innerHTML='<div class=bar><b>'+n+'</b><span><button data-m>▢</button><button data-x>✕</button></span></div><div class=body></div>';
+desk.append(w);apps[n](w.querySelector('.body'));
+const bar=w.querySelector('.bar');let ox,oy,d=false;
+w.onpointerdown=()=>w.style.zIndex=++z;
+bar.onpointerdown=e=>{if(e.target.tagName=='BUTTON'||w.classList.contains('max'))return;w.classList.remove('l','r');d=true;ox=e.clientX-w.offsetLeft;oy=e.clientY-w.offsetTop;bar.setPointerCapture(e.pointerId)};
+bar.onpointermove=e=>{if(d){w.style.left=e.clientX-ox+'px';w.style.top=e.clientY-oy+'px'}};
+bar.onpointerup=e=>{if(!d)return;d=false;if(e.clientX<24)w.classList.add('l');else if(e.clientX>innerWidth-24)w.classList.add('r');else if(e.clientY<34)w.classList.add('max')};
+w.querySelector('[data-m]').onclick=()=>{w.classList.remove('l','r');w.classList.toggle('max')};
+w.querySelector('[data-x]').onclick=()=>w.remove();
+if(innerWidth<500)w.classList.add('max');
+}
+const h=document.createElement('button');h.textContent='⌂';h.onclick=()=>desk.style.visibility=desk.style.visibility=='hidden'?'visible':'hidden';shelf.append(h);
+for(const n in apps){const b=document.createElement('button');b.textContent=n;b.onclick=()=>{desk.style.visibility='visible';openApp(n)};shelf.append(b)}
+const c=document.createElement('span');c.id='clock';shelf.append(c);tick();
+</script>

@@ -1,0 +1,20 @@
+name: mirror-to-llmm
+on:
+  push:
+    branches: [main]
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Push to LLMM
+        env:
+          KEY: ${{ secrets.LLMM_KEY }}
+        run: |
+          mkdir -p ~/.ssh
+          printf '%s\n' "$KEY" > ~/.ssh/id_llmm
+          chmod 600 ~/.ssh/id_llmm
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
+          GIT_SSH_COMMAND="ssh -i ~/.ssh/id_llmm -o IdentitiesOnly=yes" git push --force git@github.com:kaiolafketelhut/LLMM.git HEAD:refs/heads/index-html-mirror

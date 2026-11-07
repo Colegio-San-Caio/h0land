@@ -1,0 +1,57 @@
+<!doctype html><html lang="de"><head>
+<meta name="author" content="KAI OLAF KETELHUT - 2026-0812-CNNN3-BK01">
+<meta name="aktenzeichen" content="2026-0812-CNNN3-BK01"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>STATUS v49 - MOSFETQ</title><style>body{margin:0;font-family:system-ui;background:#000;color:#fff}.wrap{max-width:600px;margin:0 auto;padding:20px;text-align:center}h1{font-size:26px}.card{background:#111;border:1px solid #333;border-radius:14px;padding:12px 14px;margin:8px 0;display:flex;justify-content:space-between;align-items:center;text-align:left}.ok{border-color:#0f0}.fail{border-color:#f00}.dot{font-size:20px}.btn{background:#0f0;color:#000;border:none;padding:12px 20px;border-radius:12px;font-weight:bold;cursor:pointer;width:100%;margin-top:10px}.footer{color:#666;font-size:11px;margin-top:16px}</style><style id="din-print-1zu1">
+@page { size: A4 portrait; margin: 0; }
+@media print {
+  html, body { margin:0 !important; padding:0 !important; background:#fff !important; }
+  body { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .page, body > div, main, .container { width: 210mm !important; min-height: 297mm !important; max-width: 210mm !important; margin: 0 !important; padding: 20mm 20mm 20mm 25mm !important; box-shadow: none !important; border: 0 !important; background: #fff !important; box-sizing: border-box; }
+  /* DIN 5008: Anschriftenfeld stays at 45mm from top - keep header */
+  .din5008 { display: block !important; }
+  /* Hide interactive stuff on paper, keep QR + Barcode */
+  #qxdf, #qxdlive, #qxdsug, #qxdnnav, #plainnav, #hubnav, button, input, form { display: none !important; }
+  a { color: #000 !important; text-decoration: none !important; }
+  img { max-width: 100% !important; }
+  /* Force QR + Barcode to print */
+  img[src*="qrserver"], img[src*="barcode"] { display: block !important; }
+  .din-footer, [class*="din-footer"] { position: relative; break-inside: avoid; }
+  /* Page break helper: each .page = 1 sheet */
+  .page { break-after: page; page-break-after: always; }
+  .page:last-child { break-after: auto; page-break-after: auto; }
+}
+@media screen {
+  .page { box-shadow: 0 0 12px rgba(0,0,0,.15); }
+}
+</style>
+<div class="din-print-note" style="display:none;">DIN 5008 1:1 A4 - Aktenzeichen: 2026-0812-CNNN3-BK01</div></head><body><style>@media print{.page{width:210mm;min-height:297mm;margin:0;padding:20mm 20mm 20mm 25mm;box-shadow:none}}</style><div class="din5008" style="font-family:Arial,sans-serif;font-size:11pt;line-height:1.15;">
+<div style="font-size:8pt;color:#666;border-bottom:0.5pt solid #000;padding-bottom:2pt;">KAI OLAF KETELHUT &bull; BUILT IN BERLIN &bull; MOSFETQ &bull; ISBN 978-3-00-068463-0 &bull; Aktenzeichen: 2026-0812-CNNN3-BK01 &bull; Verfasser: KAI OLAF KETELHUT</div>
+<div style="margin-top:18mm;min-height:27.3mm;">
+<div>MOSFETQ GmbH &ndash; Kai Olaf Ketelhut</div>
+<div>Berlin, Deutschland</div>
+<div>An: Alle, die QxD-STATUS suchen</div>
+</div>
+<div style="text-align:right;margin:6mm 0;">Berlin, <span class="din-date">06. November 2026</span></div>
+<div style="font-weight:bold;">Betreff: QxD-STATUS.html &ndash; u = STATUS &ndash; nach DIN 5008</div>
+<div style="margin-top:6mm;">Sehr geehrte Damen und Herren,</div>
+<div style="margin-top:3mm;">hiermit &uuml;bersenden wir Ihnen h&ouml;flichst die Datei <b>QxD-STATUS.html</b> gem&auml;&szlig; DIN 5008.</div>
+</div><div class="wrap"><h1>🟢 LIVE STATUS — v49</h1><div style="text-align:center;margin:12px 0;"><button id="din-print-btn" onclick="window.print()" style="padding:12px 20px;background:#0a2e7a;color:#fff;border:0;border-radius:8px;font-size:15px;cursor:pointer;">🖨️ Drucken DIN 5008 A4 1:1 - 2026-0812-CNNN3-BK01</button><div style="font-size:11px;color:#666;margin-top:4px;">Strg+P / Cmd+P &rarr; A4 &bull; 100% &bull; R&auml;nder: Keine &bull; Hintergrundgrafiken: An</div></div><div style="background:#111827;color:#fff;padding:14px;border-radius:8px;margin:12px 0;"><form id="qxdf" style="margin:0;"><input id="qxdq" placeholder="Search QxD-{u} - e.g. Python, Fibonacci..." style="width:100%;padding:12px;font-size:16px;border-radius:8px;border:0;box-sizing:border-box;"><button type="submit" style="width:100%;padding:12px;margin-top:8px;background:#0a2e7a;color:#fff;border:0;border-radius:8px;font-size:16px;">Search QxD-{u} &gt;&gt;</button></form><div id="qxdlive"></div></div><p style="color:#aaa;font-size:13px">MOSFETQismsOENEYE.exe • KAI OLAF KETELHUT • Berlin<br><span id="summary">Prüfe...</span></p><div id="list"></div><button class="btn" onclick="check()">🔄 ERNEUT PRÜFEN</button><p><a href="links.html" style="color:#888;font-size:13px">← Alle Links</a></p><div class="footer">ISMS v49 • CERTIFIED PASS • BUILT IN BERLIN<br>ISBN 978-3-00-068463-0 &bull; Aktenzeichen: 2026-0812-CNNN3-BK01 &bull; Verfasser: KAI OLAF KETELHUT</div></div><script>
+const PAGES=["index.html","isms.html","links.html","flyers.html","flyer.html","flyer-de.html","flyer-github.html","CERTIFICATE.html","sitemap.xml","robots.txt","og-image.png","STATUS.html"];
+async function check(){
+  const list=document.getElementById('list'); list.innerHTML=''; let ok=0;
+  for(const p of PAGES){
+    const el=document.createElement('div'); el.className='card'; el.innerHTML=`<span>${p}</span><span class="dot">⏳</span>`;
+    list.appendChild(el);
+    try{
+      const r=await fetch(p,{method:'HEAD',cache:'no-store'});
+      const dot=el.querySelector('.dot');
+      if(r.ok){ el.classList.add('ok'); dot.textContent='🟢 '+r.status; ok++; }
+      else { el.classList.add('fail'); dot.textContent='🔴 '+r.status; }
+    }catch(e){ el.classList.add('fail'); el.querySelector('.dot').textContent='🔴 FAIL'; }
+  }
+  document.getElementById('summary').textContent = ok===PAGES.length ? `✅ ${ok}/${PAGES.length} PASS — ALL GREEN` : `⚠️ ${ok}/${PAGES.length} PASS — ${PAGES.length-ok} FAIL`;
+}
+check();
+</script><script>var KNOWN=["Single-Loop","Nested-Loops","Triangular","Multiply","Divide","Half-Loop","Sequential","While-Halving","Recursion-n","Recursion-nlogn","Fibonacci","Ada","Assembly","AWK","Bash","C","CPP","CSharp","Clojure","COBOL","Crystal","D","Dart","Elixir","Erlang","FSharp","Fortran","Go","Groovy","Haskell","HTML","Java","JavaScript","Julia","Kotlin","Lisp","Lua","MATLAB","Nim","OCaml","Pascal","Perl","PHP","PowerShell","Python","R","Ruby","Rust","Scala","Shell","SQL","Swift","TypeScript","VBA","VisualBasic","Zig","CSS","Solidity","Racket","Prolog"];var f=document.getElementById('qxdf');if(f){f.addEventListener('submit',function(e){e.preventDefault();var u=(document.getElementById('qxdq').value||'').trim();if(!u)return;var ex=KNOWN.find(function(k){return k.toLowerCase()===u.toLowerCase()});location.href=ex?'QxD-'+ex+'.html':'bluh.html?u='+encodeURIComponent(u);});document.getElementById('qxdq').addEventListener('input',function(){var v=this.value.trim();var live=document.getElementById('qxdlive');if(!v){live.innerHTML='';return}var ms=KNOWN.filter(function(k){return k.toLowerCase().indexOf(v.toLowerCase())!==-1}).slice(0,5);live.innerHTML=ms.map(function(k){return '<div onclick="location.href=\'QxD-'+k+'.html\'" style="background:#fff;color:#111;padding:8px;border-radius:6px;margin:4px 0;cursor:pointer;">QxD-'+k+'.html</div>'}).join('');});}</script><div class="din-footer" style="font-family:Arial,sans-serif;font-size:11pt;margin-top:8mm;"><div>Mit freundlichen Gr&uuml;&szlig;en</div><div style="margin-top:10mm;font-family:cursive;font-size:16pt;">Kai Olaf Ketelhut</div><div><b>KAI OLAF KETELHUT</b><br>MOSFETQ &bull; BUILT IN BERLIN<br>oeneye ISMS v48 &bull; DIN 5008-konform &bull; bluh.html bei unbekanntem {name}</div><div style="font-size:8pt;color:#666;margin-top:4mm;border-top:0.5pt solid #000;padding-top:2pt;">Anlage: 1 &ndash; QxD-STATUS.html &bull; Verteiler: main.html, QxD.html, bluh.html</div></div><script>try{document.querySelectorAll('.din-date').forEach(function(e){e.textContent=new Date().toLocaleDateString('de-DE',{day:'2-digit',month:'long',year:'numeric'});});}catch(e){}</script><div style="display:flex;gap:16px;align-items:flex-start;margin-top:6mm;border-top:0.5pt solid #000;padding-top:4mm;flex-wrap:wrap;">
+<div style="text-align:center;"><img src="https://api.qrserver.com/v1/create-qr-code/?size=110x110&data=https://kaiolafketelhut.github.io/STATUS.html%3FAZ=2026-0812-CNNN3-BK01" alt="QR STATUS.html" style="width:110px;height:110px;"><div style="font-size:7pt;color:#666;">QR &bull; STATUS.html<br>Aktenzeichen: 2026-0812-CNNN3-BK01</div></div>
+<div style="text-align:center;"><img src="https://barcode.tec-it.com/barcode.ashx?data=2026-0812-CNNN3-BK01&code=Code128&translate-eb=1" alt="Barcode 2026-0812-CNNN3-BK01" style="height:55px;max-width:260px;"><div style="font-size:8pt;letter-spacing:2px;">2026-0812-CNNN3-BK01</div><div style="font-size:7pt;color:#666;">Barcode Code128 &bull; Verfasser: KAI OLAF KETELHUT</div></div>
+<div style="font-size:8pt;color:#666;max-width:220px;">DIN 5008 &bull; A4 1:1<br>Pr&uuml;fen: QR scannen &rarr;<br>kaiola...github.io/STATUS.html<br>oeneye ISMS v48</div></div></body></html>

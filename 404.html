@@ -1,0 +1,36 @@
+<!DOCTYPE html><html><head>
+<meta name="author" content="KAI OLAF KETELHUT - 2026-0812-CNNN3-BK01">
+<meta name="aktenzeichen" content="2026-0812-CNNN3-BK01"><meta charset=utf-8><title>bluh.html - Search</title><style>body{font-family:Arial;background:#111827;margin:0}.page{max-width:700px;margin:20px auto;background:#fff;padding:25px;border-radius:12px}.box{background:#0a2e7a;color:#fff;padding:14px;border-radius:8px;text-align:center}input{width:100%;padding:14px;font-size:18px;border:2px solid #0a2e7a;border-radius:8px;box-sizing:border-box}button{width:100%;padding:14px;margin-top:8px;background:#0a2e7a;color:#fff;border:0;border-radius:8px;font-size:18px}.sug{background:#dcfce7;padding:12px;border-radius:8px;margin:8px_0;}.sug a{color:#0a2e7a;font-weight:bold}.live{background:#f1f5f9;padding:10px;border-radius:8px;margin:4px_0;cursor:pointer}</style><style id="din-print-1zu1">
+@page { size: A4 portrait; margin: 0; }
+@media print {
+  html, body { margin:0 !important; padding:0 !important; background:#fff !important; }
+  body { font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.15; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .page, body > div, main, .container { width: 210mm !important; min-height: 297mm !important; max-width: 210mm !important; margin: 0 !important; padding: 20mm 20mm 20mm 25mm !important; box-shadow: none !important; border: 0 !important; background: #fff !important; box-sizing: border-box; }
+  /* DIN 5008: Anschriftenfeld stays at 45mm from top - keep header */
+  .din5008 { display: block !important; }
+  /* Hide interactive stuff on paper, keep QR + Barcode */
+  #qxdf, #qxdlive, #qxdsug, #qxdnnav, #plainnav, #hubnav, button, input, form { display: none !important; }
+  a { color: #000 !important; text-decoration: none !important; }
+  img { max-width: 100% !important; }
+  /* Force QR + Barcode to print */
+  img[src*="qrserver"], img[src*="barcode"] { display: block !important; }
+  .din-footer, [class*="din-footer"] { position: relative; break-inside: avoid; }
+  /* Page break helper: each .page = 1 sheet */
+  .page { break-after: page; page-break-after: always; }
+  .page:last-child { break-after: auto; page-break-after: auto; }
+}
+@media screen {
+  .page { box-shadow: 0 0 12px rgba(0,0,0,.15); }
+}
+</style>
+<div class="din-print-note" style="display:none;">DIN 5008 1:1 A4 - Aktenzeichen: 2026-0812-CNNN3-BK01</div></head><body><div class=page><div class=box><h1>bluh.html</h1><div style="text-align:center;margin:12px 0;"><button id="din-print-btn" onclick="window.print()" style="padding:12px 20px;background:#0a2e7a;color:#fff;border:0;border-radius:8px;font-size:15px;cursor:pointer;">🖨️ Drucken DIN 5008 A4 1:1 - 2026-0812-CNNN3-BK01</button><div style="font-size:11px;color:#666;margin-top:4px;">Strg+P / Cmd+P &rarr; A4 &bull; 100% &bull; R&auml;nder: Keine &bull; Hintergrundgrafiken: An</div></div><p>Unknown {name} - Search QxD-{u}</p></div><p id=msg>u = unknown - type below</p><form id=f><input id=q placeholder='Type u - e.g. Python, Fibonacci, Pyhton...' autocomplete=off><button type=submit>Go to QxD-{u}.html &gt;&gt;</button></form><div id=live></div><div id=sug></div><hr><p><a href=QxD.html>QxD Patterns - 11</a> | <a href=QxD-Languages.html>QxD Languages - 48</a> | <a href=main.html>main.html</a></p><p><b>KAI OLAF KETELHUT</b> - BUILT IN BERLIN | MOSFETQ ISBN 978-3-00-068463-0 &bull; Aktenzeichen: 2026-0812-CNNN3-BK01 &bull; Verfasser: KAI OLAF KETELHUT</p><script>var KNOWN=["Single-Loop","Nested-Loops","Triangular","Multiply","Divide","Half-Loop","Sequential","While-Halving","Recursion-n","Recursion-nlogn","Fibonacci","Ada","Assembly","AWK","Bash","C","CPP","CSharp","Clojure","COBOL","Crystal","D","Dart","Elixir","Erlang","FSharp","Fortran","Go","Groovy","Haskell","HTML","Java","JavaScript","Julia","Kotlin","Lisp","Lua","MATLAB","Nim","OCaml","Pascal","Perl","PHP","PowerShell","Python","R","Ruby","Rust","Scala","Shell","SQL","Swift","TypeScript","VBA","VisualBasic","Zig","CSS","Solidity","Racket","Prolog"];
+function lev(a,b){a=a.toLowerCase();b=b.toLowerCase();var m=[];for(var i=0;i<=a.length;i++){m[i]=[i]}for(var j=0;j<=b.length;j++){m[0][j]=j}for(var i=1;i<=a.length;i++){for(var j=1;j<=b.length;j++){m[i][j]=Math.min(m[i-1][j]+1,m[i][j-1]+1,m[i-1][j-1]+(a[i-1]===b[j-1]?0:1))}}return m[a.length][b.length]}
+function showSug(u){if(!u){document.getElementById('sug').innerHTML='';return}var s=KNOWN.map(function(k){return {k:k,d:lev(u,k)}}).sort(function(x,y){return x.d-y.d}).slice(0,3);var html=s.map(function(x){return '<div class=sug>Did you mean <a href=QxD-'+x.k+'.html>QxD-'+x.k+'.html</a> ? - distance '+x.d+'</div>'}).join('');document.getElementById('sug').innerHTML=html;}
+function go(u){u=(u||'').trim();if(!u)return;var exact=KNOWN.find(function(k){return k.toLowerCase()===u.toLowerCase()});if(exact){location.href='QxD-'+exact+'.html';}else{location.href='bluh.html?u='+encodeURIComponent(u);}}
+document.getElementById('f').addEventListener('submit',function(e){e.preventDefault();go(document.getElementById('q').value);});
+document.getElementById('q').addEventListener('input',function(){var v=this.value.trim();var live=document.getElementById('live');if(!v){live.innerHTML='';showSug('');return}var matches=KNOWN.filter(function(k){return k.toLowerCase().indexOf(v.toLowerCase())!==-1}).slice(0,5);live.innerHTML=matches.map(function(k){return '<div class=live onclick="location.href=\'QxD-'+k+'.html\'">QxD-'+k+'.html</div>'}).join('');showSug(v);});
+var p=new URLSearchParams(location.search);var u=p.get('u')||p.get('name')||'';var path=location.pathname.split('/').pop();if(!u && path && path!=='bluh.html' && path!=='404.html'){u=path.replace('QxD-','').replace('.html','');}if(u){document.getElementById('msg').innerHTML='u = <b>'+u+'</b> - not found - showing bluh.html';document.getElementById('q').value=u;showSug(u);document.title='bluh.html - '+u;}
+</script></div><div style="display:flex;gap:16px;align-items:flex-start;margin-top:6mm;border-top:0.5pt solid #000;padding-top:4mm;flex-wrap:wrap;">
+<div style="text-align:center;"><img src="https://api.qrserver.com/v1/create-qr-code/?size=110x110&data=https://kaiolafketelhut.github.io/404.html%3FAZ=2026-0812-CNNN3-BK01" alt="QR 404.html" style="width:110px;height:110px;"><div style="font-size:7pt;color:#666;">QR &bull; 404.html<br>Aktenzeichen: 2026-0812-CNNN3-BK01</div></div>
+<div style="text-align:center;"><img src="https://barcode.tec-it.com/barcode.ashx?data=2026-0812-CNNN3-BK01&code=Code128&translate-eb=1" alt="Barcode 2026-0812-CNNN3-BK01" style="height:55px;max-width:260px;"><div style="font-size:8pt;letter-spacing:2px;">2026-0812-CNNN3-BK01</div><div style="font-size:7pt;color:#666;">Barcode Code128 &bull; Verfasser: KAI OLAF KETELHUT</div></div>
+<div style="font-size:8pt;color:#666;max-width:220px;">DIN 5008 &bull; A4 1:1<br>Pr&uuml;fen: QR scannen &rarr;<br>kaiola...github.io/404.html<br>oeneye ISMS v48</div></div></body></html>

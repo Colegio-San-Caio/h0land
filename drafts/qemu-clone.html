@@ -1,0 +1,22 @@
+<!doctype html><html><head><meta charset="utf-8"><title>QEMU Clone – by book</title>
+<style>body{font-family:monospace;max-width:900px;margin:2rem auto;padding:2rem;background:#0d1117;color:#c9d1d9}
+a{color:#58a6ff}.box{border:1px solid #30363d;padding:1rem;background:#161b22;margin:1rem 0}</style></head><body>
+<h1>QEMU Clone – tinyurl.com/qemu-clone -> NEW MIRROR</h1>
+<div class="box">
+Source tinyurl: <a href="https://tinyurl.com/qemu-clone">https://tinyurl.com/qemu-clone</a><br>
+Resolved: <span id="real"></span><br>
+Local: ./qemu-clone/ <br>
+QEMU command (floppy max): <code>qemu-system-i386 -fda oeneyeOS.img -fdb data.img -hda date.img -hdb GNUoeneyeALPINEunix.img</code>
+</div>
+<div class="box">
+<b>Clone command:</b><br>
+<code>git clone https://tinyurl.com/qemu-clone</code><br>
+or resolved:<br>
+<code id="cmd"></code>
+</div>
+<script>
+fetch("https://tinyurl.com/qemu-clone",{redirect:"follow"}).catch(()=>{})
+document.getElementById('real').innerText = "Check Termux curl output – " + new Date().toISOString()
+document.getElementById('cmd').innerText = "git clone " + location.href.replace('qemu-clone.html','qemu-clone')
+</script>
+</body></html>
