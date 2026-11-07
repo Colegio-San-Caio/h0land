@@ -1,0 +1,25 @@
+name: h0land
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    - cron: '0 6 * * *'
+permissions:
+  security-events: write
+  contents: read
+jobs:
+  h0land:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run h0land scan
+        run: python h0land.py scan . --sarif h0land.sarif
+      - name: Upload h0land results
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: h0land.sarif
+          category: h0land
