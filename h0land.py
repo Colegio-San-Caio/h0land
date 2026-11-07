@@ -48,7 +48,7 @@ def do_scan(target=".", sarif_path="h0land.sarif"):
     patterns = [
         ("H0L001", "Possible secret", r"(password|passwd|api_key|apikey|secret|token)\s*=\s*['\"][^'\"]+['\"]"),
         ("H0L002", "TODO left in code", r"TODO|FIXME|XXX"),
-        ("H0L003", "Hardcoded http link", r"http://[^\s\"']+"),
+        ("H0L003", "Hardcoded http link", r"http://(?!localhost)(?!127\.0\.0\.1)[^\s\"']+"),
     ]
     results = []
     total_files = 0
