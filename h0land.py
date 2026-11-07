@@ -26,6 +26,7 @@ def do_scan(target, sarif):
         except: continue
         for lineno, line in enumerate(text.splitlines(), 1):
             if any(s in line for s in ALLOW_SUBSTR): continue
+            if "h0land-ignore" in line: continue
             for rid, name, pat in RULES:
                 if re.search(pat, line):
                     findings.append((rid, name, str(p), lineno, line.strip()[:140]))
@@ -34,7 +35,7 @@ def do_scan(target, sarif):
         print(f"{rid} {f}:{ln} - {msg}")
     rules = [{"id": r[0], "name": r[1], "shortDescription": {"text": r[1]}, "fullDescription": {"text": r[1]}, "defaultConfiguration": {"level": "warning"}} for r in RULES]
     results = [{"ruleId": rid, "level": "warning", "message": {"text": msg}, "locations": [{"physicalLocation": {"artifactLocation": {"uri": f}, "region": {"startLine": ln}}}]} for rid, name, f, ln, msg in findings]
-    out = {"version": "2.1.0", "$schema": "https://json.schemastore.org/sarif-2.1.0.json", "runs": [{"tool": {"driver": {"name": "h0land", "version": "3.3.0", "informationUri": "https://github.com/Colegio-San-Caio/h0land", "rules": rules}}, "results": results}]}
+    out = {"version": "2.1.0", "$schema": "https://json.schemastore.org/sarif-2.1.0.json", "runs": [{"tool": {"driver": {"name": "h0land", "version": "3.4.0", "informationUri": "https://github.com/Colegio-San-Caio/h0land", "rules": rules}}, "results": results}]}
     with open(sarif, "w") as o: json.dump(out, o, indent=2)
     print(f"SARIF written: {sarif}")
 
