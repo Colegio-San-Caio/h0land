@@ -2,7 +2,7 @@ import sys, json, pathlib
 
 RULES = [
     ("H0L001", "DangerousEval", r"eval\(|innerHTML\s*="),
-    ("H0L002", "TodoLeft", r"TODO|FIXME|XXX"),
+    ("H0L002", "TodoLeft", r"\b(TODO|FIXME|XXX)\b\s*:?"),
     ("H0L003", "HardcodedHttp", r"http://(?!localhost)(?!127\.0\.0\.1)[^\s\"']+"),
 ]
 # only real code files
@@ -17,6 +17,8 @@ def do_scan(target, sarif):
         if not p.is_file(): continue
         if p.suffix not in CODE_EXTS: continue
         if p.name in SKIP_FILES: continue
+        if ".test." in p.name: continue
+        if p.name.endswith(".test.ts"): continue
         if any(part in SKIP_DIRS for part in p.parts): continue
         try: text = p.read_text(errors="ignore")
         except: continue
@@ -31,7 +33,7 @@ def do_scan(target, sarif):
     # SARIF
     rules = [{"id": r[0], "name": r[1], "shortDescription": {"text": r[1]}, "fullDescription": {"text": r[1]}, "defaultConfiguration": {"level": "warning"}} for r in RULES]
     results = [{"ruleId": rid, "level": "warning", "message": {"text": msg}, "locations": [{"physicalLocation": {"artifactLocation": {"uri": f}, "region": {"startLine": ln}}}]} for rid, name, f, ln, msg in findings]
-    out = {"version": "2.1.0", "$schema": "https://json.schemastore.org/sarif-2.1.0.json", "runs": [{"tool": {"driver": {"name": "h0land", "version": "3.0.0", "informationUri": "https://github.com/Colegio-San-Caio/h0land", "rules": rules}}, "results": results}]}
+    out = {"version": "2.1.0", "$schema": "https://json.schemastore.org/sarif-2.1.0.json", "runs": [{"tool": {"driver": {"name": "h0land", "version": "3.1.0", "informationUri": "https://github.com/Colegio-San-Caio/h0land", "rules": rules}}, "results": results}]}
     with open(sarif, "w") as o: json.dump(out, o, indent=2)
     print(f"SARIF written: {sarif}")
 
